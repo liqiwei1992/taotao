@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      
+      <actionSet
+            id="LQWPrintVar.actionSet"
+            label="actionSet"
+            visible="true">
+         <action
+               class="lqwprintvar.PrintVar"
+               definitionId="LQWPrintVar.action.printVar"
+               id="LQWPrintVar.action.printVar"
+               label="PrintVar">
+         </action>
+      </actionSet>
+   </extension>  
+      <!--
+      <extension
+         point="org.eclipse.ui.handlers">
+	      <handler
+	            commandId="LQWPrintVar.action.printVar"
+	            class="lqwprintvar.PrintVar">
+	      </handler>
+      </extension>
+      -->
+      <extension point="org.eclipse.ui.commands">     
+         <command name="PrintVar"
+                     id="LQWPrintVar.action.printVar" />
+	  </extension>
+      <extension
+            id="LQWPrintVar.action.printVar"
+            name="PrintVar"
+            point="org.eclipse.ui.bindings">        
+       <key sequence="Alt+D"
+                     contextId="org.eclipse.ui.textEditorScope"
+                     commandId="LQWPrintVar.action.printVar"
+                     schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" />
+	</extension>
+   
+
+</plugin>
